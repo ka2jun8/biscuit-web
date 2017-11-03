@@ -1,0 +1,35 @@
+{
+  "name": "biscuit",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "kani",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "lint": "tslint --project ./"
+  },
+  "devDependencies": {
+    "@types/eventemitter3": "^2.0.2",
+    "@types/node": "^8.0.28",
+    "@types/underscore": "^1.8.3",
+    "ts-loader": "^2.3.6",
+    "tslint": "^5.7.0",
+    "tslint-config-airbnb": "^5.3.0",
+    "tslint-loader": "^3.5.3",
+    "tslint-react": "^3.2.0",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.6"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.18",
+    "@types/react-bootstrap": "^0.31.6",
+    "@types/react-dom": "^16.0.2",
+    "eventemitter3": "^2.0.3",
+    "firebase": "^4.3.1",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.3",
+    "react-dom": "^16.0.0",
+    "underscore": "^1.8.3"
+  }
+}
