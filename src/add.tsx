@@ -68,6 +68,7 @@ export class Add extends React.Component<AddProps, EditTextInfo> {
   onAdd() {
     this.props.emitter.emit("add", this.state);
     this.setState({
+      __id: "",
       sentence: "",
       meaning: "",
       comment: "",
