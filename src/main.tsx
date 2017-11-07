@@ -71,18 +71,18 @@ export class Main extends React.Component<any, MainState> {
         });
       }, 0);
 
-      // register events of Eventemitter
-      registerLogic(
-        userProfile,
-        this.state,
-        this.setState.bind(this),
-        this.updateTextList.bind(this),
-        this.updateListInfo.bind(this),
-      );
-
     } else {
       console.warn("You don't get a userProfile in localstorage");
     }
+
+    // register events of Eventemitter
+    registerLogic(
+      this.state,
+      this.setState.bind(this),
+      this.updateTextList.bind(this),
+      this.updateListInfo.bind(this),
+    );
+    
   }
 
   checkExist(items: any[], id: string): boolean {
