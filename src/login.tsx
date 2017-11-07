@@ -46,6 +46,18 @@ export class Login extends React.Component<LoginProps, LoginState> {
     this.setState({ checkPassword: e.target.value });
   }
 
+  onPasswordKeyDown(e) {
+    if (e.keyCode === 13) {
+      this.onLogin();
+    }
+  }
+
+  onCheckPasswordKeyDown(e) {
+    if (e.keyCode === 13) {
+      this.onSignup();
+    }
+  }
+
   onLogin() {
     this.props.fb.signIn(this.state.email, this.state.password)
       .then((userInfo) => {
@@ -100,6 +112,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
           label="Password"
           placeholder="Enter Password"
           value={this.state.password}
+          onKeyDown={this.onPasswordKeyDown.bind(this)}
           onChange={this.onChangePassword.bind(this)}
         />
         <Button onClick={this.onLogin.bind(this)}>Login</Button>
@@ -132,6 +145,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
           placeholder="Enter Password"
           validationState={warning}
           value={this.state.checkPassword}
+          onKeyDown={this.onCheckPasswordKeyDown.bind(this)}
           onChange={this.onChangeCheckPassword.bind(this)}
         />
         <Button onClick={this.onSignup.bind(this)}>Register</Button>
